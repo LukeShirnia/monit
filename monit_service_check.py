@@ -45,8 +45,8 @@ if curl_response > 0:  # eg NOT 200 OK
         if log_count < 3:  # check to see if monit has restarted the service more than 3 times in the last 10 mins
                 print "Site down"
                 subprocess.call(["sudo -u user -H sh -c 'sudo /bin/systemctl restart httpd' "], shell=True)
-                subprocess.call(["/usr/bin/logger 'MONIT: Service was restarted on ' `date`"], shell=True)  # add a log entry for the restart
+                subprocess.call(["/usr/bin/logger -s 'MONIT: Service was restarted on ' `date` 2>>/var/log/monit/service.log"], shell=True)  # add a log entry for the restart
         elif log_count >= 3:
-                subprocess.call(["/usr/bin/logger 'Monit: Service has been restarted more then 3 times in 10 mins - NO action taken'"], shell=True)  # add a log entry for the restart
+                subprocess.call(["/usr/bin/logger -s 'Monit: Service has been restarted more then 3 times in 10 mins - NO action taken' 2>>/var/log/monit/service.log"], shell=True)  # add a log entry for the restart
         else:
                 print "Site is Online: no need to restart service"
