@@ -1,9 +1,12 @@
 # monit
-A basic python script used to check the responsiveness of a local application/website. Executing the python script using monit
+A basic python script used to check the responsiveness of a local application/website. 
+<br />
+
+This uses a combination of monit and python to prevent a continuous loop of restarting the service
 <br />
 
 ### Example Monit Configuration:
-
+Apply the following configuration to `/etc/monit.d/filename`
 ```
 check host localhost with address localhost every 2 cycles
    if failed
