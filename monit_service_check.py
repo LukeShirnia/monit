@@ -36,6 +36,7 @@ def check_10min_occurences(get_logger_entry, time_now_mins_10):
                                  search_file = True    # start checking the the logs once the time stampt is matched
         return count
 
+
 curl_response = subprocess.call(["curl --output /dev/null --silent --head --fail -k --connect-timeout 30 https://localhost -H 'Host: test.lazyluke.xyz'"], shell=True)
 get_logger_entry = "Service was restarted on"
 
