@@ -29,6 +29,8 @@ The python script runs a bash curl command (yes, its not ideal to run a bash com
 
 #### Replace
 Replace `https://localhost -H 'Host: test.lazyluke.xyz'` in the following curl command in the python script with the application/website you wish to monitor
+<br />
+
 
  
-`curl_response = subprocess.call(["curl --output /dev/null --silent --head --fail -k --connect-timeout 30 https://localhost -H 'Host: test.lazyluke.xyz'"], shell=True)`
+```curl_response = subprocess.call(["curl --output /dev/null --silent --head --fail -k --connect-timeout 30 https://localhost -H 'Host: test.lazyluke.xyz'"], shell=True)```
