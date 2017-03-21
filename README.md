@@ -28,7 +28,7 @@ check host localhost with address localhost every 2 cycles
 <br />
  
 
-### monit_service_check Python Script
+## monit_service_check Python Script
  Now use the python script located in this repository as the "exec" part of the monit logic.
 <br />
 
