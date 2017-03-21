@@ -26,8 +26,11 @@ check host localhost with address localhost every 2 cycles
 <br />
 
 #### Replace
-The python script runs a bash curl command (yes, its not ideal to run a bash command). 
+The python script will attempt to write to `/var/log/monit/service.log`. Replace this with a filename of your choosing and make sure the directory and file exist. 
+<br />
 
+<br />
+The python script runs a bash curl command (yes, its not ideal to run a bash command). 
 <br />
 
 
