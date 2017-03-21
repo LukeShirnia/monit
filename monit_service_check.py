@@ -25,7 +25,7 @@ def check_count(counter):
 
 def check_10min_occurences(get_logger_entry, time_now_mins_10):
         search_file = False
-        with open("/var/log/messages", "r") as inFile:
+        with open("/var/log/monit/service.log", "r") as inFile:
                 count = 0
                 for line in inFile:
                         line = line.strip()
