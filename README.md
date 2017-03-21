@@ -26,6 +26,8 @@ check host localhost with address localhost every 2 cycles
  <br />
 The python script runs a bash curl command (yes, its not ideal to run a bash command). 
 <br />
+
+#### Replace
 Replace `https://localhost -H 'Host: test.lazyluke.xyz'` in the following curl command in the python script with the application/website you wish to monitor
 
  
