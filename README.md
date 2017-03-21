@@ -27,7 +27,8 @@ check host localhost with address localhost every 2 cycles
 
 ### Replace
 ##### Replace Part 1 )
-The python script will attempt to write to `/var/log/monit/service.log`. Replace this with a filename of your choosing and make sure the directory and file exist. 
+The python script will attempt to write to `/var/log/monit/service.log`. Find and replace all instance of this path in the file with
+a filename of your choosing and make sure the directory and file exist. 
 <br />
 
 <br />
