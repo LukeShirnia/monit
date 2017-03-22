@@ -18,11 +18,6 @@ time_now_mins_60 = time_now - datetime.timedelta(minutes = 60)
 time_now_mins_60 = time_now_mins_60.strftime('%b %d %H:%M')
 
 
-def check_count(counter):
-        print "Total Number of occurences in 10 mins: %s" % (counter)
-        return counter
-
-
 def check_10min_occurences(get_logger_entry, time_now_mins_10):
         search_file = False
         with open("/var/log/messages", "r") as inFile:
