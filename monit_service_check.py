@@ -22,8 +22,8 @@ time_now_mins_1380 = time_now - datetime.timedelta(minutes = 1380)
 time_now_mins_1380 = time_now_mins_1380.strftime('%b  %-d %H:')
 
 
-
-def check_10min_occurences(get_logger_entry, time_now_mins_1380, time_now_mins_1440):
+def check_10min_occurences(time_now_mins_1380, time_now_mins_1440):
+        get_logger_entry = "Service was restarted on"
         search_file = False
         with open("/var/log/messages", "r") as inFile:
                 count = 0
@@ -37,11 +37,11 @@ def check_10min_occurences(get_logger_entry, time_now_mins_1380, time_now_mins_1
         return count
 
 
+
 curl_response = subprocess.call(["curl --output /dev/null --silent --head --fail -k --connect-timeout 30 https://localhost -H 'Host: test.lazyluke.xyz'"], shell=True)
-get_logger_entry = "Service was restarted on"
 
 if curl_response > 0:                                          # eg NOT 200 OK
-        log_count = check_10min_occurences(get_logger_entry, time_now_mins_1380, time_now_mins_1440)
+        log_count = check_10min_occurences(time_now_mins_1380, time_now_mins_1440)
         if log_count < 3:                                      # check to see if monit has restarted the service more than 3 times in the last 10 mins
                 print "Site down"
                 subprocess.call(["sudo -u user -H sh -c '/bin/systemctl restart httpd' "], shell=True)
