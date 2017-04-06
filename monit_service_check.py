@@ -15,7 +15,7 @@ time_now_mins_10 = time_now_mins_10.strftime('%b %d %H:%M')
 
 #  get time - 60 mins in same format as /var/log/messages
 time_now_mins_60 = time_now - datetime.timedelta(minutes = 60)
-time_now_mins_60 = time_now_mins_60.strftime('%b %d %H:%M')
+time_now_mins_60 = time_now_mins_60.strftime('%b %-d %H:%M')
 
 
 def check_10min_occurences(get_logger_entry, time_now_mins_10):
