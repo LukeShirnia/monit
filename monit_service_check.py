@@ -15,7 +15,7 @@ time_now_mins_10 = time_now_mins_10.strftime('%b %d %H:%M')
 
 #  get time - 24 hours (1440 mins) in same format as /var/log/messages
 time_now_mins_1440 = time_now - datetime.timedelta(minutes = 1440)
-time_now_mins_1440 = time_now_mins_1440.strftime('%b  %-d %H:%M')
+time_now_mins_1440 = time_now_mins_1440.strftime('%b  %-d %H:')
 
 # get time - 23 hours (1380) in same format as /var/log/messages
 time_now_mins_1380 = time_now - datetime.timedelta(minutes = 1380)
